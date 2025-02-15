@@ -1,0 +1,1366 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    background-color: #151515;
+}
+body{
+    overflow-x: hidden;
+    white-space: wrap;
+}
+#crsr{
+    height: 2vw;
+    width: 2vw;
+    border: 1.5px solid #abaaaa;
+    border-radius: 50%;
+    position: fixed;
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+}
+#loader{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 9999;
+    background-color: #040404;
+    padding: 20vh 13vw;
+}
+.line{
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 2vw;
+}
+.loading{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 2vw;
+}
+.loading h6,.loading h5{
+    font-size: 4vw;
+    font-weight: 400;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.line h1,h2{
+    font-size: 7vw;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.line h2{
+    opacity: 0;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    font-size: 6vw;
+}
+@-webkit-keyframes anime{
+    0%{
+        color: white;
+        -webkit-text-stroke: 1px white;
+        opacity:1;
+        font-weight: 650;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    48%{
+        color: transparent;
+        -webkit-text-stroke: 1px white;
+        opacity:0;
+        font-weight: 650;
+        font-family: fantasy;
+    }
+    50%{
+        color: white;
+        -webkit-text-stroke: 1px white;
+        opacity:1;
+        font-weight: 650;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    100%{
+        color: transparent;
+        -webkit-text-stroke: 1px white;
+        opacity:0;
+        font-weight: 650;
+        font-family: fantasy;
+    }
+}
+@keyframes anime{
+    0%{
+        color: white;
+        -webkit-text-stroke: 1px white;
+        opacity:1;
+        font-weight: 650;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    48%{
+        color: transparent;
+        -webkit-text-stroke: 1px white;
+        opacity:0;
+        font-weight: 650;
+        font-family: fantasy;
+    }
+    50%{
+        color: white;
+        -webkit-text-stroke: 1px white;
+        opacity:1;
+        font-weight: 650;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    100%{
+        color: transparent;
+        -webkit-text-stroke: 1px white;
+        opacity:0;
+        font-weight: 650;
+        font-family: fantasy;
+    }
+}
+#main{
+    position: relative;
+    background-color: transparent;
+}
+.page1{
+    height: 95vh;
+    width: 100%;
+    position: relative;
+}
+.page1 #nav{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 1.3vw 5.5vw;
+}
+.page1 #nav svg{
+    width: 7%;
+}
+.nav-part2{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 2vw;
+}
+.nav-part2 h4{
+    font-size: 1vw;
+    font-weight: 500;
+}
+.hero{
+    width: 72%;
+    margin-left: 28%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow-y: hidden;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+#hero1::before{
+    content: "01";
+    position: absolute;
+    left: 19%;
+    top: 25%;
+    font-weight: 150;
+    font-size: 4vw;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.hero:nth-child(2){
+    margin-top: 14vh;
+}
+.hero h1, .hero h2{
+    font-size: 6.7vw;
+    font-weight: 520;
+    line-height: 6.7vw;
+    text-transform: uppercase;
+}
+.hero h2{
+    border-bottom: 0.5vw solid white;
+    padding-bottom: 0.8vw;
+}
+.hero h2:hover{
+    border-bottom: 0.5vw solid #ffffff00;
+    -webkit-text-stroke: 2px white;
+    color: transparent;
+    font-weight: 500;
+}
+#hero3,#hero2,#hero4{
+    position: relative;
+    z-index: 99;
+}
+#dabba{
+    height: 22vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+    opacity: 0;
+}
+.page2{
+    width: 100%;
+    height: 90vh;
+    padding-top: 3vh;
+    position: relative;
+}
+.video-container{
+    width: 71vw;
+    height: 65vh;
+    position: relative;
+    left: 28%;
+    background-image: url("https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.video-container video{
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    opacity: 0;
+}
+.video-cursor{
+    width: 8vw;
+    height: 8vw;
+    background-color: #FFA63D;
+    border-radius: 50%;
+    position: absolute;
+    top: -10%;
+    left: 80%;
+    z-index: 999;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.page3{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    margin-bottom: 20vh;
+    padding: 0vh 2vw;
+}
+.page3 h1{
+    font-size: 7.7vw;
+    text-transform: uppercase;
+    position: relative;
+    margin-left: 27vw;
+    font-weight: 500;
+}
+.page3 h1::before{
+    content: "02";
+    position: absolute;
+    left: -12%;
+    top: 7%;
+    font-weight: 150;
+    font-size: 4vw;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.page3 .underline{
+    margin-left:27vw;
+    margin-top: 3vh;
+}
+.page3 .image-container{
+    padding: 1vw;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 5vw;
+}
+.image-div{
+    height: 35vw;
+    width: 26vw;
+    position: relative;
+    overflow: hidden;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+}
+.image-div:nth-child(1){
+    height: 28vw;
+    width: 21vw;
+}
+.image-div img{
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+}
+.page3-circle1{
+    width: 22vw;
+    height: 22vw;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 20vh;
+    margin-left: 7vw;
+    position: relative;
+}
+.page3-circle1 svg{
+    width: 30%;
+}
+.page3-circle2{
+    width: 22vw;
+    height: 22vw;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+}
+.page3-circle2 svg{
+    width: 30%;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+}
+.circle-in{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    scale: 0;
+    -webkit-transition: all ease 0.4s;
+    -o-transition: all ease 0.4s;
+    transition: all ease 0.4s;
+}
+.circle-in p{
+    scale: 0;
+    color: black;
+    font-size: 1vw;
+    width: 70%;
+    font-weight: 550;
+    -webkit-transition: all ease 0.4s;
+    -o-transition: all ease 0.4s;
+    transition: all ease 0.4s;
+    -webkit-transition-delay: 0.35s;
+         -o-transition-delay: 0.35s;
+            transition-delay: 0.35s;
+}
+.page3-circle1:hover .circle-in{
+    scale: 1;
+}
+.page3-circle1:hover .circle-in p{
+    scale: 1;
+}
+.page3-circle2:hover .circle-in{
+    scale: 1;
+}
+.page3-circle2:hover .circle-in p{
+    scale: 1;
+}
+.page4{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding: 3vh 0;
+}
+.page4-content{
+    width: 70vw;
+    margin-left: 29%;
+}
+.page4-content h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    position: relative;
+}
+.page4-content h1::before{
+    content: "03";
+    position: absolute;
+    left: -12%;
+    top: 7%;
+    font-weight: 150;
+    font-size: 4vw;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.underline{
+    height: 1px;
+    width: 100%;
+    background-color: #fff;
+    margin: 5vw 0;
+}
+.page4-content>p{
+    font-size: 2vw;
+    width: 50%;
+    margin-bottom: 3vw;
+}
+.page4-flex{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.page4-flex img{
+    width: 48%;
+}
+.page4-flex p{
+    font-size: 1vw;
+    margin-left: 1vw;
+    width: 20%;
+}
+.page4-bluediv{
+    width: 25vw;
+    background-color: #3F7DF4;
+    position: relative;
+    padding: 3vw 1.8vw;
+    margin-top: -150px;
+    margin-left: 200px;
+}
+.blue-div-content{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 1.8vw;
+    border-bottom: 1px solid #F5F8FE;
+}
+.blue-div-content h4{
+    font-size: 1vw;
+    font-weight: 600;
+}
+.blue-div-content p{
+    font-size: 0.8vw;
+    font-weight: 400;
+    width: 50%;
+}
+.page5{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+.content{
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+.content h1{
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    font-size: 7vw;
+    display: inline-block;
+    font-weight: 400;
+    margin-right: 4px;
+    text-transform: uppercase;
+    -webkit-animation-name: anime1;
+            animation-name: anime1;
+    -webkit-animation-duration: 17s;
+            animation-duration: 17s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+}
+@-webkit-keyframes anime1 {
+    from{
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+    to{
+        -webkit-transform: translateX(-100%);
+                transform: translateX(-100%);
+    }
+}
+@keyframes anime1 {
+    from{
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+    to{
+        -webkit-transform: translateX(-100%);
+                transform: translateX(-100%);
+    }
+}
+.content2{
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+.content2 h1{
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    font-size: 7vw;
+    display: inline-block;
+    font-weight: 400;
+    margin-right: 4px;
+    text-transform: uppercase;
+    -webkit-animation-name: anime1;
+            animation-name: anime1;
+    -webkit-animation-duration: 17s;
+            animation-duration: 17s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+#footer{
+    height: 95vh;
+    padding-left: 28.3vw;
+    position: relative;
+}
+#footer h1{
+    font-size: 7vw;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: relative;
+}
+#footer h1:hover{
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+}
+#footer h1::before{
+    content: "04";
+    position: absolute;
+    left: -12%;
+    top: 5%;
+    font-weight: 150;
+    font-size: 4vw;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.footer-part{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+}
+.footer-part div{
+    width: 20%;
+    padding: 0 2vw;
+    margin-bottom: 3vw;
+}
+.footer-part .box h6{
+    margin-bottom: 3vh;
+    font-weight: 500;
+    font-size: 1.1vw;
+}
+.footer-part .box h5{
+    font-weight: 450;
+    font-size: 1.7vw;
+    line-height: 3.5vh;
+}
+.footer-part{
+    margin-bottom: 5vh;
+}
+.underline1{
+    height: 1px;
+    width: 100%;
+    background-color: white;
+    margin: 6vh 0;
+}
+#footer>h5{
+    font-size: 1vw;
+    font-weight: 500;
+}
+._canvas_container{
+    z-index: 999999 !important;
+    pointer-events: none;
+}
+
+/* Start doing Responsive */
+
+
+@media (max-width:950px){
+    body{
+        overflow-x: hidden;
+        white-space: wrap;
+    }
+    .page1{
+        height: 50vh;
+        width: 100%;
+        position: relative;
+    }
+    .page1 #nav{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        padding: 1.3vw 5.5vw;
+    }
+    .page1 #nav svg{
+        width: 10%;
+        scale: 1.4;
+    }
+    .nav-part2{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        gap: 2vw;
+    }
+    .nav-part2 h4{
+        font-size: 3vw;
+        font-weight: 500;
+    }
+    #dabba{
+        display: none;
+    }
+    .page2{
+        width: 100%;
+        height: 80vh;
+        margin-top: 3vh;
+        position: relative;
+    }
+    .video-container{
+        width: 80vw;
+        height: 60vh;
+        position: relative;
+        left: 34%;
+        background-image: url("https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+    .page3{
+        min-height: 40vh;
+        width: 100%;
+        position: relative;
+        margin-bottom: 100vh;
+        margin: 4vh 2vw;
+        overflow: hidden;
+    }
+    .page3 h1{
+        font-size: 7.7vw;
+        text-transform: uppercase;
+        position: relative;
+        margin-left: 27vw;
+        font-weight: 500;
+    }
+    .page3 h1::before{
+        content: "02";
+        position: absolute;
+        left: -12%;
+        top: 7%;
+        font-weight: 150;
+        font-size: 4vw;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .page3 .underline{
+        margin-left:27vw;
+        margin-top: 3vh;
+    }
+    .page3 .image-container{
+        padding: 1vw;
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        gap: 5vw;
+    }
+    .image-div{
+        height: 35vw;
+        width: 26vw;
+        position: relative;
+        overflow: hidden;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+    }
+    .image-div:nth-child(1){
+        height: 28vw;
+        width: 21vw;
+    }
+    .image-div img{
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+           object-fit: cover;
+        -o-object-position: center;
+           object-position: center;
+    }
+    .page3-circle1{
+        width: 22vw;
+        height: 22vw;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        margin-top: 20vh;
+        margin-left: 7vw;
+        position: relative;
+    }
+    .page3-circle1 svg{
+        width: 30%;
+    }
+    .page3-circle2{
+        width: 22vw;
+        height: 22vw;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        position: relative;
+    }
+    .page3-circle2 svg{
+        width: 30%;
+        -webkit-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+    }
+    .circle-in{
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        scale: 0;
+        -webkit-transition: all ease 0.4s;
+        -o-transition: all ease 0.4s;
+        transition: all ease 0.4s;
+    }
+    .circle-in p{
+        scale: 0;
+        color: black;
+        font-size: 1vw;
+        width: 70%;
+        font-weight: 550;
+        -webkit-transition: all ease 0.4s;
+        -o-transition: all ease 0.4s;
+        transition: all ease 0.4s;
+        -webkit-transition-delay: 0.35s;
+             -o-transition-delay: 0.35s;
+                transition-delay: 0.35s;
+    }
+    .page4{
+        min-height: 100vh;
+        width: 100%;
+        position: relative;
+        margin-top: 13vh;
+    }
+    .page4-content{
+        width: 70vw;
+        margin-left: 29%;
+    }
+    .page4-content h1{
+        font-size: 10vw;
+        text-transform: uppercase;
+        position: relative;
+    }
+    .page4-content h1::before{
+        content: "03";
+        position: absolute;
+        left: -12%;
+        top: 7%;
+        font-weight: 150;
+        font-size: 5vw;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .underline{
+        height: 1px;
+        width: 100%;
+        background-color: #fff;
+        margin: 5vw 0;
+    }
+    .page4-content>p{
+        font-size: 3.5vw;
+        width: 50%;
+        margin-bottom: 3vw;
+    }
+    .page4-flex{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    .page4-flex img{
+        width: 48%;
+    }
+    .page4-flex p{
+        font-size: 2vw;
+        margin-left: 1vw;
+        width: 20%;
+    }
+    .page4-bluediv{
+        width: 40vw;
+        background-color: #3F7DF4;
+        position: relative;
+        padding: 3vw 1.8vw;
+        margin-top: -150px;
+        margin-left: 200px;
+    }
+    .blue-div-content{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        padding: 1.8vw;
+        border-bottom: 1px solid #F5F8FE;
+    }
+    .blue-div-content h4{
+        font-size: 2.6vw;
+        font-weight: 600;
+    }
+    .blue-div-content p{
+        font-size: 2vw;
+        font-weight: 400;
+        width: 40%;
+    }
+    .page5{
+        width: 100%;
+        min-height: 40vh;
+        position: relative;
+    }
+    #footer{
+        height: 65vh;
+        padding-left: 19vw;
+        position: relative;
+    }
+    #footer h1{
+        font-size: 9vw;
+        font-weight: 500;
+        text-transform: uppercase;
+        position: relative;
+    }
+    .footer-part div{
+        width: 20%;
+        padding: 0 2vw;
+        margin-bottom: 3vw;
+    }
+    .footer-part .box h6{
+        margin-bottom: 3vh;
+        font-weight: 500;
+        font-size: 4vw;
+    }
+    .footer-part .box h5{
+        font-weight: 450;
+        font-size: 2.7vw;
+        line-height: 3.5vh;
+    }
+    .footer-part{
+        margin-bottom: 5vh;
+    }
+    .underline1{
+        height: 1px;
+        width: 100%;
+        background-color: white;
+        margin: 6vh 0;
+    }
+    #footer>h5{
+        font-size: 3vw;
+        font-weight: 500;
+    }
+}
+
+
+@media (max-width:600px) {
+    body{
+        overflow-x: hidden;
+        white-space: wrap;
+    }
+    .page1{
+        height: 60vh;
+        width: 100%;
+        position: relative;
+        padding-top: 1px;
+    }
+    .page1 #nav{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: end;
+        padding: 3vw 3vw;
+        position: fixed;
+        top: 0;
+        width: 94%;
+    }
+    .page1 #nav svg{
+        width: 15%;
+        /* margin-right: 1vw; */
+    }
+    .nav-part2{
+        display: none;
+    }
+    .hero{
+        width: 72%;
+        margin-left: 4%;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
+        height: fit-content;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        overflow-y: hidden;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+    #hero1::before{
+        content: "01";
+        position: absolute;
+        left:4%;
+        top: 32%;
+        font-weight: 150;
+        font-size: 5vw;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .hero:nth-child(2){
+        margin-top: 25vh;
+    }
+    .hero h1, .hero h2{
+        font-size: 9.3vw;
+        font-weight: 480;
+        line-height: 8.4vw;
+        text-transform: uppercase;
+    }
+    .hero h2{
+        border-bottom: 1vw solid white;
+        padding-bottom: 0.8vw;
+    }
+
+    .page2{
+        width: 100%;
+        height: 60vh;
+        padding-top: 4.3vh;
+        position: relative;
+    }
+    .video-container{
+        width: 100vw;
+        height: 52vh;
+        position: relative;
+        left: 0%;
+        background-image: url("https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+    .video-container video{
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+           object-fit: cover;
+        opacity: 0;
+    }
+    .video-cursor{
+        width: 20vw;
+        height: 20vw;
+        background-color: #FFA63D;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+                transform: translate(-50%,-50%);
+        z-index: 999;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+
+    .page3{
+        min-height: 100vh;
+        width: 95%;
+        position: relative;
+        padding: 0vh 2vw;
+        padding-top: 35vh;
+        margin-bottom: 55vh;
+    }
+    .page3 h1{
+        font-size: 9vw;
+        text-transform: uppercase;
+        position: relative;
+        margin-left: 3vw;
+        font-weight: 500;
+    }
+    .page3 h1::before{
+        content: "02";
+        position: absolute;
+        left: 0%;
+        top: -60%;
+        font-weight: 200;
+        font-size: 6vw;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .page3 .underline{
+        margin-left:2vw;
+        width: 94%;
+    }
+    .page3 .image-container{
+        padding: 1vw;
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+    }
+    .image-div{
+        height: 110vw;
+        width: 90vw;
+        position: relative;
+        overflow: hidden;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+        margin-top: 8vw;
+    }
+    .image-div:nth-child(1){
+        height: 110vw;
+        width: 90vw;
+    }
+    .page3-circle1{
+        width: 22vw;
+        height: 22vw;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        margin-top: 20vh;
+        margin-left: 7vw;
+        position: relative;
+        display: none;
+    }
+    .page3-circle2{
+        width: 22vw;
+        height: 22vw;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        position: relative;
+        display: none;
+    }
+
+    .page4{
+        min-height: 100vh;
+        width: 100%;
+        position: relative;
+        margin-top: -25%;
+    }
+    .page4-content{
+        width: 95%;
+        margin-left: 5%;
+    }
+    .page4-content h1{
+        font-size: 10vw;
+        text-transform: uppercase;
+        position: relative;
+    }
+    .page4-content h1::before{
+        content: "03";
+        position: absolute;
+        left: 0%;
+        top: -40%;
+        font-weight: 250;
+        font-size: 6.5vw;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .underline{
+        height: 2px;
+        width: 90%;
+        background-color: #fff;
+        margin: 5vw 0;
+    }
+    .page4-content>p{
+        font-size: 6vw;
+        width: 100%;
+        margin-bottom: 5vw;
+    }
+    .page4-flex{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+    .page4-flex img{
+        width: 100%;
+        margin-left: -2vw;
+    }
+    .page4-flex p{
+        font-size: 4.5vw;
+        margin: 4vw 0vw 3vw 0vw;
+        width: 100%;
+    }
+    .page4-bluediv{
+        width: 90%;
+        background-color: #3F7DF4;
+        position: relative;
+        padding: 3vw 1.8vw;
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+    .blue-div-content{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        padding: 7vw 3vw;
+        border-bottom: 1px solid #F5F8FE;
+    }
+    .blue-div-content h4{
+        font-size: 5vw;
+        font-weight: 600;
+    }
+    .blue-div-content p{
+        font-size: 4vw;
+        font-weight: 400;
+        width: 40%;
+    }
+    .page4-content .underline:nth-last-child(1){
+        margin: 15vw 0 8vw 2vw;
+    }
+
+    .page5{
+        width: 100%;
+        min-height: 60vh;
+        position: relative;
+    }
+    .content h1{
+        -webkit-text-stroke: 1px white;
+        color: transparent;
+        font-size: 16vw;
+        display: inline-block;
+        font-weight: 400;
+        margin-right: 4px;
+        text-transform: uppercase;
+        -webkit-animation-name: anime1;
+                animation-name: anime1;
+        -webkit-animation-duration: 17s;
+                animation-duration: 17s;
+        -webkit-animation-timing-function: linear;
+                animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+    }
+    .content2 h1{
+        -webkit-text-stroke: 1px white;
+        color: transparent;
+        font-size: 16vw;
+        display: inline-block;
+        font-weight: 400;
+        margin-right: 4px;
+        text-transform: uppercase;
+        -webkit-animation-name: anime1;
+                animation-name: anime1;
+        -webkit-animation-duration: 17s;
+                animation-duration: 17s;
+        -webkit-animation-timing-function: linear;
+                animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+        animation-direction: reverse;
+    }
+
+    #footer{
+        height: 120vh;
+        padding-left: 4vw;
+        position: relative;
+    }
+    #footer h1{
+        font-size: 11vw;
+        font-weight: 500;
+        text-transform: uppercase;
+        position: relative;
+    }
+    #footer h1::before{
+        content: "04";
+        position: absolute;
+        left: 0%;
+        top: -35%;
+        font-weight: 250;
+        font-size: 6vw;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .footer-part{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+    .footer-part div{
+        width: 20%;
+        padding: 0 2vw;
+        margin-bottom: 3vw;
+    }
+    .footer-part .box h6{
+        margin: 4vh 0;
+        font-weight: 500;
+        font-size: 6vw;
+    }
+    .footer-part .box h5{
+        font-weight: 450;
+        font-size: 5.5vw;
+        line-height: 3.5vh;
+    }
+    .footer-part{
+        margin-bottom: 5vh;
+    }
+    .underline1{
+        height: 1px;
+        width: 94%;
+        background-color: white;
+        margin: 6vh 0;
+    }
+    #footer>h5{
+        font-size: 4vw;
+        font-weight: 500;
+        margin-bottom: 4vh 0;
+    }
+}
