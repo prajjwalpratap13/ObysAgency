@@ -643,6 +643,9 @@ body{
         overflow-x: hidden;
         white-space: wrap;
     }
+    #crsr{
+        display: none;
+    }
     .page1{
         height: 50vh;
         width: 100%;
@@ -969,6 +972,9 @@ body{
     body{
         overflow-x: hidden;
         white-space: wrap;
+    }
+    #crsr{
+        display: none;
     }
     .page1{
         height: 60vh;
