@@ -34,24 +34,24 @@ function loadAnimation(){
     let loadingCounter=document.querySelector(".loading h5");
     let tl= gsap.timeline();
 
-tl.from(".line h1,.line h2",{
-    y:150,
-    stagger:0.2,
-    delay:0.2,
-    duration:0.7
-})
-tl.from(".loading",{
-    opacity: 0,
-    onStart: function (){
+    tl.from(".line h1,.line h2",{
+        y:150,
+        stagger:0.2,
+        delay:0.2,
+        duration:0.7
+    })
+    tl.from(".loading",{
+        opacity: 0,
+        onStart: function (){
         let count=0;
         let interval=setInterval(function increase(){
-        if(count<=100){
-            loadingCounter.innerHTML=count++;
-        }
-        else{
-            clearInterval(interval);
-        }
-    },27)
+            if(count<=100){
+                loadingCounter.innerHTML=count++;
+            }
+            else{
+                clearInterval(interval);
+            }
+        },27)
     }
 })
 tl.to(".line h2",{
