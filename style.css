@@ -217,6 +217,9 @@ body{
     position: relative;
     z-index: 99;
 }
+#hero3{
+    width: fit-content;
+}
 #dabba{
     height: 22vw;
     position: absolute;
